@@ -1,7 +1,9 @@
-<div class="container">
-  <main-nav></main-nav>
-  <div class="gallery">
-    <router-outlet></router-outlet>
-  </div>
-  <main-footer></main-footer>
+<div class="tank-create-container box-shadow">
+    <label class="label">Tank Name</label>
+    <input [(ngModel)]="tank.name" class="form-input" type="text" required>
+    <label class="label">Serial Number</label>
+    <input [(ngModel)]="tank.serialnumber" class="form-input" type="integer" required>
+    <label class="label">Gallons</label>
+    <input [(ngModel)]="tank.gallons" class="form-input" type="integer" required>
+    <button (click)="createTank(tank)" class="btn pull-right">Create Tank</button>
 </div>
